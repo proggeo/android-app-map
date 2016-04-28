@@ -1,10 +1,12 @@
 package com.example.proggeo.android_app_map;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MapActivity extends Activity {
@@ -64,6 +66,16 @@ public class MapActivity extends Activity {
                 break;
         }
         plan.setImageResource(floorId);
+
+        ((Button)findViewById(R.id.button1)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button2)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button3)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button4)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button5)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button6)).setTextColor(Color.BLACK);
+        ((Button)findViewById(R.id.button7)).setTextColor(Color.BLACK);
+
+        ((Button)v).setTextColor(Color.RED);
 
     }
 }
