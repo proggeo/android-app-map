@@ -24,7 +24,7 @@ public class Drawing extends View{
         super(context);
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
-        plan = BitmapFactory.decodeResource(getResources(), R.drawable.plan4_400,options);
+        plan = BitmapFactory.decodeResource(getResources(), R.drawable.plan1,options);
 
     }
 
@@ -42,6 +42,10 @@ public class Drawing extends View{
 
 //        canvas.drawPicture(picture);
 
-        canvas.drawBitmap(plan, 0, 0, new Paint());
+        canvas.drawBitmap(plan, 0, 0, null);
+        Paint p = new Paint();
+        p.setColor(Color.RED);
+
+        canvas.drawLine(0,0,100,100,p);
     }
 }

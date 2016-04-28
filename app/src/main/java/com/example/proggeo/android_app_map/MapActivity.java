@@ -1,8 +1,12 @@
 package com.example.proggeo.android_app_map;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,6 +19,10 @@ public class MapActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ((Button) findViewById(R.id.button1)).setTextColor(Color.RED);
+
+
     }
 
     @Override
@@ -39,43 +47,43 @@ public class MapActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void switchFloors(View v){
-        ImageView plan = (ImageView)findViewById(R.id.imageView);
-        int floorId=R.drawable.plan1;
-        switch(v.getId()){
+    public void switchFloors(View v) {
+        ImageView plan = (ImageView) findViewById(R.id.imageView);
+        int floorId = R.drawable.plan1;
+        switch (v.getId()) {
             case R.id.button1:
-                floorId=R.drawable.plan1;
+                floorId = R.drawable.plan1;
                 break;
             case R.id.button2:
-                floorId=R.drawable.plan2;
+                floorId = R.drawable.plan2;
                 break;
             case R.id.button3:
-                floorId=R.drawable.plan3;
+                floorId = R.drawable.plan3;
                 break;
             case R.id.button4:
-                floorId=R.drawable.plan4;
+                floorId = R.drawable.plan4;
                 break;
             case R.id.button5:
-                floorId=R.drawable.plan5;
+                floorId = R.drawable.plan5;
                 break;
             case R.id.button6:
-                floorId=R.drawable.plan6;
+                floorId = R.drawable.plan6;
                 break;
             case R.id.button7:
-                floorId=R.drawable.plan7;
+                floorId = R.drawable.plan7;
                 break;
         }
         plan.setImageResource(floorId);
 
-        ((Button)findViewById(R.id.button1)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button2)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button3)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button4)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button5)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button6)).setTextColor(Color.BLACK);
-        ((Button)findViewById(R.id.button7)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button1)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button2)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button3)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button4)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button5)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button6)).setTextColor(Color.BLACK);
+        ((Button) findViewById(R.id.button7)).setTextColor(Color.BLACK);
 
-        ((Button)v).setTextColor(Color.RED);
+        ((Button) v).setTextColor(Color.RED);
 
     }
 }
