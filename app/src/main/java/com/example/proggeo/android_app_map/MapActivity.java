@@ -13,7 +13,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class MapActivity extends Activity {
+
+    ArrayList<ArrayList<Point>> paths = new ArrayList<ArrayList<Point>>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +25,9 @@ public class MapActivity extends Activity {
         setContentView(R.layout.activity_map);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ((Button) findViewById(R.id.button1)).setTextColor(Color.RED);
-
-
+        for (int i = 0; i < 8; i++) {
+            paths.add(i, new ArrayList<Point>());
+        }
     }
 
     @Override
@@ -48,29 +53,41 @@ public class MapActivity extends Activity {
     }
 
     public void switchFloors(View v) {
-        ImageView plan = (ImageView) findViewById(R.id.imageView);
+        MapImageView plan = (MapImageView) findViewById(R.id.imageView);
         int floorId = R.drawable.plan1;
+        int floor = 1;
         switch (v.getId()) {
             case R.id.button1:
                 floorId = R.drawable.plan1;
+                floor = 1;
                 break;
             case R.id.button2:
                 floorId = R.drawable.plan2;
+                floor = 2;
                 break;
             case R.id.button3:
                 floorId = R.drawable.plan3;
+                floor = 3;
                 break;
             case R.id.button4:
                 floorId = R.drawable.plan4;
+                floor = 4;
                 break;
             case R.id.button5:
                 floorId = R.drawable.plan5;
+                floor = 5;
                 break;
             case R.id.button6:
                 floorId = R.drawable.plan6;
+                floor = 6;
                 break;
             case R.id.button7:
                 floorId = R.drawable.plan7;
+                floor = 7;
+                break;
+            default:
+                floorId = R.drawable.plan1;
+                floor = 1;
                 break;
         }
         plan.setImageResource(floorId);
@@ -84,6 +101,26 @@ public class MapActivity extends Activity {
         ((Button) findViewById(R.id.button7)).setTextColor(Color.BLACK);
 
         ((Button) v).setTextColor(Color.RED);
+
+//        paths.get(1).add(new Point(0, 0));
+//        paths.get(1).add(new Point(100, 100));
+//        paths.get(1).add(new Point(200, 100));
+//        paths.get(1).add(new Point(300, 300));
+//        paths.get(1).add(new Point(400, 300));
+//        paths.get(1).add(new Point(500, 400));
+//        paths.get(1).add(new Point(600, 400));
+
+
+        paths.get(1).add(new Point(325, 5));
+        paths.get(1).add(new Point(325, 218));
+
+        paths.get(2).add(new Point(325,330));
+        paths.get(2).add(new Point(325,100));
+//        paths.get(2).add(new Point(275,100));
+
+
+
+        plan.path = paths.get(floor);
 
     }
 }
