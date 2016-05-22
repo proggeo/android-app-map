@@ -36,14 +36,28 @@ public class MapImageView extends ImageView {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         p = new Paint();
+        Paint p1 = new Paint();
+        Paint p2 = new Paint();
+        Paint roomPaint = new Paint();
+        roomPaint.setColor(Color.RED);
+        roomPaint.setStrokeWidth(8);
+        p1.setColor(Color.BLUE);
+        p1.setStrokeWidth(3);
+        p2.setColor(Color.BLACK);
         p.setColor(Color.BLUE);
         p.setStrokeWidth(5);
-//        canvas.drawLine(0, 0, 100, 100, p);
         for (int i = 0; i < path.size() - 1; i++) {
             canvas.drawLine(path.get(i).x, path.get(i).y, path.get(i + 1).x, path.get(i + 1).y, p);
+            canvas.drawPoint(path.get(i).x, path.get(i).y, roomPaint);
+            canvas.drawPoint(path.get(i + 1).x, path.get(i + 1).y, roomPaint);
         }
-        for (int i = path.size() - 1; i > 1; i--) {
-            canvas.drawLine(path.get(i).x, path.get(i).y, path.get(i - 1).x, path.get(i - 1).y, p);
+
+        for (int i = 0; i < 700; i += 10) {
+            for (int j = 0; j < 1000; j += 10) {
+                if (i % 100 == 0 || j % 100 == 0) canvas.drawPoint(i, j, p2);
+                else canvas.drawPoint(i, j, p1);
+            }
         }
+
     }
 }
