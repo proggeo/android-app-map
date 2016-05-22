@@ -101,6 +101,7 @@ public class IndoorMapObject {
         return Math.sqrt(Math.pow(this.coor.x - neighbour.coor.x, 2) + Math.pow(this.coor.y - neighbour.coor.y, 2));
     }
 
+
     public static void main(String[] args) {
         IndoorMapObject aud01 = new IndoorMapObject("01", new Point(0, 1), 1);
         IndoorMapObject aud02 = new IndoorMapObject("02", new Point(1, 1), 1);

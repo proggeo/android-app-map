@@ -33,7 +33,7 @@ public class NavigationController {
 
         ArrayList<IndoorMapObject> path = new ArrayList<IndoorMapObject>();
         if (startRoom != null && endRoom != null) {
-            startRoom.findPath(endRoom, path, 0);
+            path = dijkstra(startRoom, endRoom);
         }
         for (int i = 0; i < path.size(); i++) {
             paths.get(path.get(i).getFloor()).add(path.get(i).getCoor());
@@ -54,6 +54,49 @@ public class NavigationController {
         if (startRoom != null && endRoom != null) {
             startRoom.addConnection(endRoom);
         }
+    }
+
+    public ArrayList<IndoorMapObject> dijkstra(IndoorMapObject startRoom, IndoorMapObject endRoom) {
+        ArrayList<Boolean> checked = new ArrayList<Boolean>();
+        for (int i = 0; i < rooms.size(); i++) checked.add(false);
+        ArrayList<Double> minimumLength = new ArrayList<Double>();
+        for (int i = 0; i < rooms.size(); i++) minimumLength.add(-1.0);
+        ArrayList<IndoorMapObject> previousRoom = new ArrayList<IndoorMapObject>();
+        for (int i = 0; i < rooms.size(); i++) previousRoom.add(null);
+
+        int currentRoom = rooms.indexOf(startRoom);
+        IndoorMapObject currentObj = startRoom;
+        minimumLength.set(currentRoom, 0.0);
+
+        for (int i = 0; i < rooms.size(); i++) {
+            checked.set(currentRoom, true);
+            currentObj = rooms.get(currentRoom);
+            for (int j = 0; j < rooms.size(); j++) {
+                if (rooms.get(j).getDistance(currentObj) > -1 && !checked.get(j)) {
+                    if (minimumLength.get(j) == -1.0 || minimumLength.get(j) > (minimumLength.get(currentRoom) + currentObj.getDistance(rooms.get(j)))) {
+                        minimumLength.set(j, minimumLength.get(currentRoom) + currentObj.getDistance(rooms.get(j)));
+                        previousRoom.set(j, currentObj);
+                    }
+                }
+            }
+            int closest = -1; // id of closest room
+            for (int j = 0; j < rooms.size(); j++) {
+                if (!checked.get(j))
+                    if (minimumLength.get(j) >= 0 && (closest==-1 || minimumLength.get(j) < minimumLength.get(closest)))
+                        closest = j;
+            }
+            currentRoom = closest;
+            if (closest == -1) break;
+            if (rooms.indexOf(endRoom) == currentRoom) break;
+        }
+        ArrayList<IndoorMapObject> path = new ArrayList<IndoorMapObject>();
+        IndoorMapObject current = endRoom;
+        path.add(current);
+        while (previousRoom.get(rooms.indexOf(current)) != null) {
+            current = previousRoom.get(rooms.indexOf(current));
+            path.add(0, current);
+        }
+        return path;
     }
 
     public void setRooms() {
