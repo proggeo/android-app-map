@@ -52,12 +52,12 @@ public class MapImageView extends ImageView {
             canvas.drawPoint(path.get(i + 1).x, path.get(i + 1).y, roomPaint);
         }
 
-        for (int i = 0; i < 700; i += 10) {
-            for (int j = 0; j < 1000; j += 10) {
-                if (i % 100 == 0 || j % 100 == 0) canvas.drawPoint(i, j, p2);
-                else canvas.drawPoint(i, j, p1);
-            }
-        }
+//        for (int i = 0; i < 700; i += 10) {
+//            for (int j = 0; j < 1000; j += 10) {
+//                if (i % 100 == 0 || j % 100 == 0) canvas.drawPoint(i, j, p2);
+//                else canvas.drawPoint(i, j, p1);
+//            }
+//        }
 
     }
 }

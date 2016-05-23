@@ -98,7 +98,7 @@ public class IndoorMapObject {
 
     public double getDistance(IndoorMapObject neighbour) {
         if (!connections.contains(neighbour)) return -1.0;
-        return Math.sqrt(Math.pow(this.coor.x - neighbour.coor.x, 2) + Math.pow(this.coor.y - neighbour.coor.y, 2));
+        return Math.sqrt(Math.pow(this.coor.x - neighbour.coor.x, 2) + Math.pow(this.coor.y - neighbour.coor.y, 2))+Math.abs(this.floor-neighbour.floor)*100000;
     }
 
 
