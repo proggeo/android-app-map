@@ -26,30 +26,6 @@
             android:name="com.example.proggeo.android_app_map.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level2"
-            android:label="@string/title_activity_level2" >
-        </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level3"
-            android:label="@string/title_activity_level3" >
-        </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level4"
-            android:label="@string/title_activity_level4" >
-        </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level5"
-            android:label="@string/title_activity_level5" >
-        </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level6"
-            android:label="@string/title_activity_level6" >
-        </activity>
-        <activity
-            android:name="com.example.proggeo.android_app_map.level7"
-            android:label="@string/title_activity_level7" >
-        </activity>
     </application>
 
 </manifest>

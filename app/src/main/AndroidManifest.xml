@@ -20,30 +20,7 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
-        <activity
-            android:name=".level2"
-            android:label="@string/title_activity_level2" >
-        </activity>
-        <activity
-            android:name=".level3"
-            android:label="@string/title_activity_level3" >
-        </activity>
-        <activity
-            android:name=".level4"
-            android:label="@string/title_activity_level4" >
-        </activity>
-        <activity
-            android:name=".level5"
-            android:label="@string/title_activity_level5" >
-        </activity>
-        <activity
-            android:name=".level6"
-            android:label="@string/title_activity_level6" >
-        </activity>
-        <activity
-            android:name=".level7"
-            android:label="@string/title_activity_level7" >
-        </activity>
+
     </application>
 
 </manifest>

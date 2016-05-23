@@ -11,6 +11,8 @@ import java.util.ArrayList;
 public class NavigationController {
 
     ArrayList<IndoorMapObject> rooms;
+    IndoorMapObject startRoom = null;
+    IndoorMapObject endRoom = null;
 
     public NavigationController() {
         rooms = new ArrayList<IndoorMapObject>();
@@ -18,8 +20,8 @@ public class NavigationController {
     }
 
     public ArrayList<ArrayList<Point>> findRoute(String startName, String endName) {
-        IndoorMapObject startRoom = null;
-        IndoorMapObject endRoom = null;
+        startRoom = null;
+        endRoom = null;
 
         ArrayList<ArrayList<Point>> paths = new ArrayList<ArrayList<Point>>();
         for (int i = 0; i < 8; i++) {

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:2:1-49:12
+ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\
 		INJECTED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml
 		INJECTED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml
 application
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:5:5-47:19
+ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:5:5-24:19
 	android:label
 		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:8:9-41
 	android:allowBackup
@@ -45,42 +45,6 @@ ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\
 		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:21:13-55
 	android:name
 		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:20:13-40
-activity#com.example.proggeo.android_app_map.level2
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:23:9-26:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:25:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:24:13-35
-activity#com.example.proggeo.android_app_map.level3
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:27:9-30:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:29:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:28:13-35
-activity#com.example.proggeo.android_app_map.level4
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:31:9-34:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:33:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:32:13-35
-activity#com.example.proggeo.android_app_map.level5
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:35:9-38:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:37:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:36:13-35
-activity#com.example.proggeo.android_app_map.level6
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:39:9-42:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:41:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:40:13-35
-activity#com.example.proggeo.android_app_map.level7
-ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:43:9-46:20
-	android:label
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:45:13-58
-	android:name
-		ADDED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml:44:13-35
 uses-sdk
 INJECTED from D:\OneDrive\$Programming\Android\ISInformApp\android-app-map\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 	android:targetSdkVersion
