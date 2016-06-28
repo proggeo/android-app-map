@@ -18,14 +18,6 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        v = new Drawing(MainActivity.this);
-//        setContentView(v);
-//
-//        ImageView mImageView = new ImageView(this);
-//        mImageView.setImageBitmap(
-//                decodeSampledBitmapFromResource(getResources(),R.drawable.plan4_400,100,100));
-//
-//        setContentView(mImageView);
 
         setContentView(R.layout.activity_main);
 

@@ -98,30 +98,7 @@ public class IndoorMapObject {
 
     public double getDistance(IndoorMapObject neighbour) {
         if (!connections.contains(neighbour)) return -1.0;
-        return Math.sqrt(Math.pow(this.coor.x - neighbour.coor.x, 2) + Math.pow(this.coor.y - neighbour.coor.y, 2))+Math.abs(this.floor-neighbour.floor)*100000;
-    }
-
-
-    public static void main(String[] args) {
-        IndoorMapObject aud01 = new IndoorMapObject("01", new Point(0, 1), 1);
-        IndoorMapObject aud02 = new IndoorMapObject("02", new Point(1, 1), 1);
-        IndoorMapObject aud03 = new IndoorMapObject("03", new Point(1, 0), 1);
-        IndoorMapObject aud04 = new IndoorMapObject("04", new Point(2, 0), 1);
-        IndoorMapObject aud05 = new IndoorMapObject("05", new Point(2, 1), 1);
-        IndoorMapObject aud06 = new IndoorMapObject("06", new Point(2, 2), 1);
-
-        aud01.addConnection(aud02);
-        aud02.addConnection(aud03);
-        aud03.addConnection(aud04);
-        aud04.addConnection(aud05);
-        aud05.addConnection(aud06);
-        aud02.addConnection(aud06);
-
-        ArrayList<IndoorMapObject> route = new ArrayList<IndoorMapObject>();
-        System.out.println(aud01.findPath(aud06, route, 0));
-        for (int i = 0; i < route.size(); i++) {
-            System.out.println(route.get(i).getName());
-        }
+        return Math.sqrt(Math.pow(this.coor.x - neighbour.coor.x, 2) + Math.pow(this.coor.y - neighbour.coor.y, 2))+Math.pow(Math.abs(this.floor-neighbour.floor),0.9)*100000;
     }
 
 }

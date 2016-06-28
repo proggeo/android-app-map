@@ -99,6 +99,7 @@ public class MapActivity extends Activity {
                 floor = 1;
                 break;
         }
+        plan.destroyDrawingCache();
         plan.setImageResource(floorId);
 
         for (int i = 1; i < paths.size(); i++) {
@@ -108,7 +109,7 @@ public class MapActivity extends Activity {
         }
 
         ((Button) v).setTextColor(Color.RED);
-        plan.path = paths.get(floor);
+        plan.path = (ArrayList)paths.get(floor).clone();
 
     }
 
